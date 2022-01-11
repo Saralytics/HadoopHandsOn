@@ -52,6 +52,8 @@ Commands: pull & run, settings - file sharing,
 It simulates a complete linux environment with hadoop ecosystem, hive, HDFS, Hue, Hive metastore. You can interact with it from the command line and from the webUI which is Hue. 
 
 # Pipeline Overview
+![alt text](https://github.com/Saralytics/hadoop/blob/main/image.jpg?raw=true)
+
 Connect - batching processing - storage 
 * In this case, we will not include the buffer and visualization layers 
 * Demonstrate a batch processing pipeline, this is what MapReduce is best for. 
