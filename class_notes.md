@@ -1,19 +1,26 @@
+# Pull the docker image
+docker pull cloudera/quickstart
+
 # after docker pull
 
-docker run -m 4g --hostname=quickstart.cloudera --privileged=true -t -i -v /Users/Zhaoxue/Desktop/lib/hadoop/localfiles:/src --publish-all=true -p 8888 cloudera/quickstart /usr/bin/docker-quickstart
-
-# copy files
-docker cp <filename> <containername>:/src 
-
-docker cp txns.txt xenodochial_bassi:/home/cloudera
+docker run -m 4g --hostname=quickstart.cloudera --privileged=true -t -i -v /Users/li/Desktop/playground/hadoop/dataset:/src --publish-all=true -p 8888 cloudera/quickstart /usr/bin/docker-quickstart
 
 # Check if all services are running once started the container 
 jps 
 
-# switch to user cloudera, once in the linux terminal  
+# switch to user cloudera, once in the linux terminal, avoid using the root user   
 su - cloudera 
 
-# Use the command line interface, go to Hive shell
+# copy files
+Note to add the local directory in Docker file sharing option, otherwise the copy would fail.  
+
+docker cp <filename> <containername>:<target_path_in_docker> (part after the comma is the path in the container) 
+docker cp googleplaystore.csv epic_keller:/home/cloudera
+docker cp googleplaystore_user_reviews.csv epic_keller:/home/cloudera
+
+(note we are copying to /home/cloudera because this is the home folder of the user cloudera that we have switched to) 
+
+# Return to the docker container, Use the command line interface, go to Hive shell
 
 hive 
 
