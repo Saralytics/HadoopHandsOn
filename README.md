@@ -30,7 +30,7 @@ Follow Me On
 Appendix
 
 # The Data Set
-I’m using the dataset [link to git] prepared by [author name], the folder contains a typical transactions data
+I’m using a [kaggle dataset](https://www.kaggle.com/lava18/google-play-store-apps), which contains Google Playstore apps data. 
 Why did you choose it? Easy to understand for learning purposes  
 What is problematic? These files are actually very small, which is not the case in real life. 
 We are going to experiment all Hadoop and Hive operations with this dataset. 
